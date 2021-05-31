@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+        <a href="/" class="navbar-brand">Anasayfa</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse9">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse9">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="/about">Hakkımızda</a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="/articles">Makaleler</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+
+            {% if session["logged_in"] %}
+              <li class="nav-item active">
+              <a class="nav-link" href="/dashboard">Kontrol Paneli</a>
+              </li>
+              <li class="nav-item active">
+              <a class="nav-link" href="/logout">Çıkış Yap</a>
+              </li>
+            {% else %}
+              <li class="nav-item active">
+              <a class="nav-link" href="/login">Giriş Yap</a>
+              </li>
+            {% endif %}
+
+            <li class="nav-item active">
+            <a class="nav-link" href="/register">Kayıt Ol</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
